@@ -39,8 +39,8 @@ const SidebarPage = () => {
           <button onClick={() => navigate("/card")}>Card Page</button>
           <button onClick={() => navigate("/viacep")}>Viacep Page</button>
           <button onClick={() => navigate("/herocard")}>Hero Cards Page</button>
-          <button onClick={() => navigate("/herotasks")}>
-            Hero Tasks Page
+          <button onClick={() => navigate("/heromissions")}>
+            Hero Missions Page
           </button>
         </div>
       </div>

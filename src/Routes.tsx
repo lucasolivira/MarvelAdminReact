@@ -7,7 +7,7 @@ import CardPage from "../components/profileCards/Index";
 import ViacepPage from "../components/viacepSdieEffect/Index";
 import SidebarPage from "../components/sidebarComponents/Sidebar";
 import HeroCardPage from "../components/heroCardsComponent/Index";
-import HeroTasksPage from "../components/heroTasksComponent/Index";
+import HeroMissionsPage from "../components/heroMissionsComponent/Index";
 
 const AppRoutes = () => {
   return (
@@ -20,7 +20,7 @@ const AppRoutes = () => {
         <Route path="/card" element={<CardPage />} />
         <Route path="/viacep" element={<ViacepPage />} />
         <Route path="/herocard" element={<HeroCardPage />} />
-        <Route path="/herotasks" element={<HeroTasksPage />} />
+        <Route path="/heromissions" element={<HeroMissionsPage />} />
       </Route>
     </Routes>
   );
