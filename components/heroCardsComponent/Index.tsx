@@ -47,17 +47,33 @@ const HeroCardPage = () => {
           width: "100%",
         }}
       >
+        <div
+          style={{
+            position: "fixed",
+            top: "65px",
+            left: "250px",
+            backgroundColor: "transparent",
+            color: "#c52319",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontWeight: "bold",
+            fontSize: "150%",
+            maxWidth: "300px",
+          }}
+        >
+          <p>Existing Heroes: {heroes.length}</p>
+        </div>
         <h1 style={{ margin: 0 }}>Hero Cards Page</h1>
       </div>
-      <br />
-      <br />
-      <br />
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
           width: "100%",
+          marginTop: "60px",
+          justifyContent: "center",
         }}
       >
         {heroes.map((hero: any) => (
@@ -67,7 +83,7 @@ const HeroCardPage = () => {
             </CardHeader>
             <CardBody>
               <ScrollView>
-                <p>{hero.Bio__c || "Sem biografia"}</p>
+                <p>{hero.Bio__c || "No bio"}</p>
               </ScrollView>
             </CardBody>
             <CardFooter>
