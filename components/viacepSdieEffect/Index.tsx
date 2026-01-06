@@ -28,7 +28,7 @@ const ViacepPage = () => {
   useEffect(() => {
     if (cep.length !== 8) {
       setAddress(null);
-      setError("");
+      setError("Complete o CEP com 8 dígitos.");
       return;
     }
 
