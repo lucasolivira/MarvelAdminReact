@@ -12,18 +12,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-navigation/elements": "^2.5.2",
-    "@react-navigation/native": "^7.1.14",
-    "@react-navigation/native-stack": "^7.3.21",
     "axios": "^1.11.0",
     "cors": "^2.8.5",
-    "expo": "^53.0.19",
     "express": "^5.1.0",
     "jsforce": "^3.9.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-native-safe-area-context": "^5.4.0",
-    "react-native-screens": "~4.11.1",
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {

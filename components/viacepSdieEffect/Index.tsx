@@ -20,8 +20,8 @@ const ViacepPage = () => {
   const [address, setAddress] = useState<Address | null>(null);
   const [error, setError] = useState("");
 
-  const handleCep = (i) => {
-    const valorDigitado = i.target.value.replace(/[^0-9]/g, "");
+  const handleCep = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valorDigitado = e.target.value.replace(/[^0-9]/g, "");
     setCep(valorDigitado);
   };
 
