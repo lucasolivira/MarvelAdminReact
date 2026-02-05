@@ -12,7 +12,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.11.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsforce": "^3.9.3",
