@@ -1,4 +1,4 @@
-import UserDetails from "../../components/userdetailsComponents/Index";
+import UserDetails from "../components/userdetailsComponents/Index";
 
 const User = () => {
   return <UserDetails />;

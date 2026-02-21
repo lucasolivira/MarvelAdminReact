@@ -1,4 +1,4 @@
-import CardPage from "../../components/profileCards/Index";
+import CardPage from "../components/profileCards/Index";
 
 const Card = () => {
   return <CardPage />;

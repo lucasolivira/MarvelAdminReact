@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import ThemeToggle from "../../src/contexts/ThemeToggle";
-import ScrollViewSidebar from "../scrollViwComponent/ScrollSidebar";
+// import ScrollViewSidebar from "../scrollViwComponent/ScrollSidebar";
+import ThemeToggle from "../../contexts/ThemeToggle";
 
 const SidebarPage = () => {
   const navigate = useNavigate();

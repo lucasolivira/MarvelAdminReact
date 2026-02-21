@@ -1,4 +1,4 @@
-import HeroCardPage from "../../components/heroCardsComponent/Index";
+import HeroCardPage from "../components/heroCardsComponent/Index";
 
 const HeroCard = () => {
   return <HeroCardPage />;

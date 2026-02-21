@@ -1,4 +1,4 @@
-import HeroMissionsPage from "../../components/heroMissionsComponent/Index";
+import HeroMissionsPage from "../components/heroMissionsComponent/Index";
 
 const HeroMissions = () => {
   return <HeroMissionsPage />;

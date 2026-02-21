@@ -22,15 +22,4 @@ export default function SFconnection() {
     console.log("User ID: " + userInfo.id);
     console.log("Org ID: " + userInfo.organizationId);
   });
-
-  conn.query("SELECT Id, Name FROM Account", function (err, result) {
-    if (err) {
-      return console.error(err);
-    }
-    for (var i = 0; i < result.records.length; i++) {
-      var record = result.records[i];
-      console.log("Account Name: " + record.Name);
-    }
-  });
-  return conn;
 }

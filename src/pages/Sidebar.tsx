@@ -1,4 +1,4 @@
-import SidebarPage from "../../components/sidebarComponents/Sidebar";
+import SidebarPage from "../components/sidebarComponents/Sidebar";
 
 const Sidebar = () => {
   return <SidebarPage />;
