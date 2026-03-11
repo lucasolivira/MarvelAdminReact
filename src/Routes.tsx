@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import App from "./pages/App";
-import SidebarPage from "./components/sidebarComponents/Sidebar";
-import UserDetails from "./pages/UserDetails";
-import CardPage from "./components/profileCards/Index";
-import ViacepPage from "./components/viacepSdieEffect/Index";
-import HeroCardPage from "./components/heroCardsComponent/Index";
-import HeroMissionsPage from "./components/heroMissionsComponent/Index";
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import App from './pages/App';
+import SidebarPage from './components/Sidebar';
+import UserDetails from './pages/UserDetails';
+import CardPage from './components/ProfileCards/Index';
+import ViacepPage from './components/Viacep';
+import HeroCardPage from './components/HeroCardsComponent';
+import HeroMissionsPage from './components/HeroMissionsComponent/Index';
 
 const AppRoutes = () => {
   return (

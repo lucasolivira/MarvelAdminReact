@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Card from "../profileCards/Card";
-import CardBody from "../profileCards/CardBody";
-import CardHeader from "../profileCards/CardHeader";
-import ScrollViewCards from "../scrollViwComponent/ScrollCards";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import ScrollViewCards from '../ScrollViwComponent/ScrollCards';
+import Card from '../ProfileCards/Card';
+import CardHeader from '../ProfileCards/CardHeader';
+import CardBody from '../ProfileCards/CardBody';
+import * as S from './heroMissionsComponent.styled';
 
 const HeroMissionsPage = () => {
   type Mission = {
@@ -12,18 +13,19 @@ const HeroMissionsPage = () => {
     Description__c?: string;
     Status__c: string;
   };
+
   const [missions, setMissions] = useState<Mission[]>([]);
   const [filter, setFilter] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchMissions = async () => {
       try {
-        const response = await axios.post("http://localhost:4000/select", {
-          objectName: "Mission__c",
+        const response = await axios.post('http://localhost:4000/select', {
+          objectName: 'Mission__c',
         });
         setMissions(response.data);
       } catch (error) {
-        console.error("Erro ao buscar heróis:", error);
+        console.error('Erro ao buscar heróis:', error);
       }
     };
 
@@ -32,68 +34,41 @@ const HeroMissionsPage = () => {
 
   const handleFilterChange = (newFilter: string | null) => {
     setFilter(newFilter);
-    console.log("newFilter:", newFilter);
+    console.log('newFilter:', newFilter);
   };
 
   const filteredMissions = filter
     ? missions.filter((mission: any) => mission.Status__c === filter)
     : missions;
-  console.log("filter:", filter);
+
+  console.log('filter:', filter);
   console.log(
-    "Todos os status recebidos:",
-    missions.map((m) => m.Status__c),
+    'Todos os status recebidos:',
+    missions.map((m) => m.Status__c)
   );
 
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          position: "fixed",
-          flexDirection: "row",
-          top: 0,
-          left: "240px",
-          backgroundColor: "#c52319",
-          alignItems: "left",
-          padding: "15px",
-          width: "100%",
-        }}
-      >
-        <h1 style={{ margin: 0 }}>Hero Missions Page</h1>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          position: "fixed",
-          top: "85px",
-          left: "240px",
-          width: "calc(100% - 240px)",
-          justifyContent: "center",
-          gap: "10px",
-          padding: "10px",
-        }}
-      >
-        <button onClick={() => handleFilterChange("Not Started")}>
+      <S.Header>
+        <S.Title>Hero Missions Page</S.Title>
+      </S.Header>
+
+      <S.FilterBar>
+        <S.Button onClick={() => handleFilterChange('Not Started')}>
           Not Started
-        </button>
-        <button onClick={() => handleFilterChange("In Progress")}>
+        </S.Button>
+        <S.Button onClick={() => handleFilterChange('In Progress')}>
           In Progress
-        </button>
-        <button onClick={() => handleFilterChange("Completed")}>
+        </S.Button>
+        <S.Button onClick={() => handleFilterChange('Completed')}>
           Completed
-        </button>
-        <button onClick={() => handleFilterChange(null)}>Reset Filter</button>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          width: "100%",
-          marginTop: "105px",
-          justifyContent: "center",
-        }}
-      >
+        </S.Button>
+        <S.Button onClick={() => handleFilterChange(null)}>
+          Reset Filter
+        </S.Button>
+      </S.FilterBar>
+
+      <S.CardsContainer>
         {filteredMissions.length > 0 ? (
           filteredMissions.map((mission: any) => (
             <Card key={mission.Id} variant="default">
@@ -102,10 +77,10 @@ const HeroMissionsPage = () => {
               </CardHeader>
               <CardBody>
                 <ScrollViewCards>
-                  <p style={{ textAlign: "center" }}>
+                  <S.DescriptionTitle>
                     <b>Description:</b>
-                  </p>
-                  <p>{mission.Description__c || "No Description"}</p>
+                  </S.DescriptionTitle>
+                  <p>{mission.Description__c || 'No Description'}</p>
                 </ScrollViewCards>
               </CardBody>
             </Card>
@@ -113,7 +88,7 @@ const HeroMissionsPage = () => {
         ) : (
           <p>Nenhuma missão encontrada.</p>
         )}
-      </div>
+      </S.CardsContainer>
     </>
   );
 };
