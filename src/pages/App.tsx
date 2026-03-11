@@ -1,4 +1,4 @@
-import AppPage from "../components/appComponents/Index";
+import AppPage from '../components/AppComponents/Index';
 
 const App = () => {
   return <AppPage />;

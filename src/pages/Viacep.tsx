@@ -1,4 +1,4 @@
-import ViacepPage from "../components/viacepSdieEffect/Index";
+import ViacepPage from '../components/Viacep';
 
 const Viacep = () => {
   return <ViacepPage />;
