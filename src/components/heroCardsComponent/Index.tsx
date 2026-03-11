@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "../../src/pages/index.css";
 import axios from "axios";
 import Card from "../profileCards/Card";
 import CardHeader from "../profileCards/CardHeader";

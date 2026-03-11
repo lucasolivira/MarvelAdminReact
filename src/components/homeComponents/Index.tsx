@@ -1,9 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import ThemeToggle from "../../src/contexts/ThemeToggle";
-import { ThemeProvider } from "../../src/contexts/ThemeContext";
-import "../../src/pages/index.css";
 import ActionButton from "../actionButtons/ActionButton";
+import { ThemeProvider } from "../../contexts/ThemeContext";
+import ThemeToggle from "../../contexts/ThemeToggle";
 
 const HomePage = () => {
   const navigate = useNavigate();
